@@ -70,4 +70,3 @@ spl_autoload_register('\core\Index::load');
 
 \core\Index::run();
 
-$router = new \core\Router();

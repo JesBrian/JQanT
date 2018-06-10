@@ -2,6 +2,8 @@
 
 namespace core;
 
+use core\lib\Router;
+
 class Index
 {
 //    private static $classMap = [];
@@ -21,11 +23,9 @@ class Index
         $classPath = JQANT . '/' . str_replace('\\', '/', $class) . '.php';
 
 //        if (in_array($class, self::$classMap)) {
-//            echo 888;
 //            return true;
 //        }
         if (file_exists($classPath)) {
-            echo 666;
             require_once ($classPath);
 //            array_push(self::$classMap, $class);
             return true;

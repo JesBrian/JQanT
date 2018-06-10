@@ -7,6 +7,6 @@
     RewriteCond %{REQUEST_FILENAME} !-d
 
     # 重定向所有请求到 index.php?url=PATHNAME
-    RewriteRule ^(.*)$ index.php?url=$1 [PT,L]
+    RewriteRule ^(.*)$ index.php?$1 [QSA,PT,L]
 
 </IfModule>
