@@ -42,7 +42,7 @@
 /**
  * 项目所在根目录
  */
-define('JQANT', realpath('/'));
+define('JQANT', realpath('./'));
 
 /**
  * 框架核心代码目录
@@ -55,7 +55,7 @@ define('JQANT_CORE', JQANT . '/core');
 define('APP', JQANT . '/app');
 
 /**
- * 项目调试
+ * 项目开启调试
  */
 define('DEBUG', true);
 if (DEBUG === true) {
@@ -64,3 +64,10 @@ if (DEBUG === true) {
     ini_set('display_errors', 'OFF');
 }
 
+require_once JQANT_CORE . '/Index.php';
+
+spl_autoload_register('\core\Index::load');
+
+\core\Index::run();
+
+$router = new \core\Router();
