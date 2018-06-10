@@ -31,11 +31,22 @@ class Router
 
             // 将路由参数转为 控制器 & 方法 & get 请求参数
             if ($paramLen > 1) {
+
+                // 绑定控制器对应方法
                 self::$action = $pathParam[1];
+
+                // 给 $_GET 添加键值对参数
                 for ($i = 2; $i < $paramLen; $i = $i + 2) {
+
+                    // 如果参数数量为基数也就是只有 key 没 value 则直接跳出循环
+                    if (isset($pathParam[$i + 1]) === false) {
+                        break;
+                    }
                     $_GET[$pathParam[$i]] = $pathParam[$i + 1];
                 }
             }
+
+            // 绑定对应的控制器
             self::$controller = $pathParam[0];
         }
     }
