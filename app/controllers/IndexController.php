@@ -4,7 +4,7 @@ namespace app\controllers;
 
 class IndexController
 {
-    public static function index()
+    public function index()
     {
         echo 'Index - index';
     }

@@ -14,7 +14,9 @@ class Index
         $controllerFilePath = APP . '/controllers/' . $controller . 'Controller.php';
         if (file_exists($controllerFilePath)) {
             require_once ($controllerFilePath);
-            ('\app\controllers\\' . $controller . 'Controller')::$action();
+            $controllerClass = '\app\controllers\\' . $controller . 'Controller';
+            $controllerObj = new $controllerClass();
+            $controllerObj->$action();
         } else {
             echo '888';
         }
