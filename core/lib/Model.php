@@ -6,7 +6,7 @@ class Model
 {
     public function index()
     {
-        echo 'Model Index Function<br/>';
+        echo 'Model TestModel Function<br/>';
         $arr = [
             'php' => 'php',
             'java' => 'java',

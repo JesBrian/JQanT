@@ -59,7 +59,7 @@ define('APP', JQANT . '/app');
  */
 define('DEBUG', true);
 
-
+require './core/common/GlobalFunction.php';
 require './vendor/autoload.php';
 
 if (DEBUG === true) {
