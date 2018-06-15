@@ -13,7 +13,5 @@ class IndexController extends Controller
 
         $model = new TestModel();
         $model->index();
-
-        dump(get());
     }
 }
