@@ -9,7 +9,8 @@
   "require": {
     "php": ">=7.0.0",
     "filp/whoops": "*",
-    "symfony/var-dumper": "*"
+    "symfony/var-dumper": "*",
+    "illuminate/database": "*"
   },
   "repositories": {
     "packagist": {

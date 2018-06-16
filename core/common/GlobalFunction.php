@@ -80,7 +80,7 @@ function delSession(string $key = '')
  * @param int $expire
  * @return bool|string
  */
-function cookie(string $key = '', string $value = '', int $expire)
+function cookie($key = '', $value = '', $expire)
 {
     if ($value === '') {
         try {
@@ -106,4 +106,23 @@ function delCookie(string $key = '')
     } else {
         setcookie($key, '', $timestamp);
     }
+}
+
+/**
+ * Notes: 设置获取配置参数
+ * @param null $key
+ * @param null $value
+ * @return mixed|null
+ */
+function config($key = null, $value = null)
+{
+    if (is_null($value)) {
+        return $GLOBALS['config'][$key];
+    }
+
+    if (is_null($key)) {
+        return $GLOBALS['config'];
+    }
+
+    return $GLOBALS['config'][$key] = $value;
 }

@@ -4,8 +4,8 @@ namespace core\lib;
 
 class Router
 {
-    public static $controller = 'index';
-    public static $action = 'index';
+    public static $controller;
+    public static $action;
 
     /**
      * Router constructor.
@@ -16,6 +16,10 @@ class Router
      */
     public function __construct()
     {
+        // 设置默认控制器和方法
+        self::$controller = config('defaultController');
+        self::$action = config('defaultAction');
+
         // 获取路由 path
         $path = $_SERVER['REQUEST_URI'];
 

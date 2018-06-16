@@ -40,7 +40,7 @@
  */
 
 /**
- * 项目所在根目录
+ * 项目代码所在根目录
  */
 define('JQANT', realpath('./'));
 
@@ -50,19 +50,22 @@ define('JQANT', realpath('./'));
 define('JQANT_CORE', JQANT . '/core');
 
 /**
- * 项目代码文件夹
+ * 项目扩展代码目录
  */
 define('APP', JQANT . '/app');
 
 /**
- * 项目开启调试
+ * 配置文件代码目录
  */
-define('DEBUG', true);
+define('CONFIG', JQANT . '/config');
 
-require JQANT_CORE . '/common/GlobalFunction.php';
+
+
+$GLOBALS['config'] = require CONFIG . '/global.php';
+
 require './vendor/autoload.php';
 
-if (DEBUG === true) {
+if ($GLOBALS['config']['isDebug'] === true) {
     $whoops = new \Whoops\Run();
     $errorTitle = '框架运行错误';
     $option = new \Whoops\Handler\PrettyPageHandler();
@@ -75,6 +78,7 @@ if (DEBUG === true) {
     ini_set('display_errors', 'OFF');
 }
 
+require JQANT_CORE . '/common/GlobalFunction.php';
 require JQANT_CORE . '/Index.php';
 
 spl_autoload_register('\core\Index::load');

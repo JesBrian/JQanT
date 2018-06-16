@@ -9,9 +9,14 @@ class IndexController extends Controller
 {
     public function index()
     {
-        echo 'Index - index<br/>';
+//        dump($GLOBALS['config']);
+//        echo 'Index - index<br/>';
+//
+//        $model = new TestModel();
+//        $model->index();
 
-        $model = new TestModel();
-        $model->index();
+        dump(config('isDebug'));
+        config('isDebug', false);
+        dump(config('isDebug'));
     }
 }
