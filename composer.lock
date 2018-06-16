@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "98bd46a8c2727ed1341e186962da79bb",
+    "content-hash": "30d1e91384d32fb6995b62f1940a0308",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -386,6 +386,53 @@
                 "time"
             ],
             "time": "2018-06-15T11:52:26+00:00"
+        },
+        {
+            "name": "noahbuscher/macaw",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noahbuscher/macaw.git",
+                "reference": "cf4dd15893f97539f3f91bb296e04324fbbb379e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/noahbuscher/macaw/cf4dd15893f97539f3f91bb296e04324fbbb379e.zip",
+                "reference": "cf4dd15893f97539f3f91bb296e04324fbbb379e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "guzzle/guzzle": "~3.9",
+                "phpunit/phpunit": "^4.8-stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NoahBuscher\\Macaw\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Noah Buscher",
+                    "email": "me@noahbuscher.com",
+                    "homepage": "http://noahbuscher.com/"
+                }
+            ],
+            "description": "Simple PHP router class.",
+            "homepage": "https://github.com/noahbuscher/Macaw",
+            "keywords": [
+                "php",
+                "php-router",
+                "router"
+            ],
+            "time": "2018-01-09T05:51:33+00:00"
         },
         {
             "name": "psr/container",
@@ -793,7 +840,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "noahbuscher/macaw": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

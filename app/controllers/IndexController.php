@@ -22,5 +22,6 @@ class IndexController extends Controller
         config('isDebug', false);
         dump(config('isDebug'));
 
+        dump(get());
     }
 }

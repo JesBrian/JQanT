@@ -67,7 +67,7 @@ require './vendor/autoload.php';
 require JQANT_CORE . '/HelperFunction/index.php';
 require JQANT_CORE . '/Index.php';
 
-spl_autoload_register('\core\Index::load');
+spl_autoload_register('\core\Index::autoloadClass');
 
 
 if (config('isDebug') === true) {
@@ -87,5 +87,5 @@ if ((config('sessionAutoStart') === true) && (PHP_SESSION_ACTIVE !== session_sta
 }
 
 
-\core\Index::run();
+\core\Index::bootstrap();
 

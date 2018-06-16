@@ -10,7 +10,8 @@
     "php": ">=7.0.0",
     "filp/whoops": "*",
     "symfony/var-dumper": "*",
-    "illuminate/database": "*"
+    "illuminate/database": "*",
+    "noahbuscher/macaw": "dev-master"
   },
   "repositories": {
     "packagist": {
