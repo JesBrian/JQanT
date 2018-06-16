@@ -6,5 +6,5 @@ return [
     'defaultController' => 'index',
     'defaultAction' => 'index',
 
-//    ''
+    'sessionAutoStart' => true,
 ];
