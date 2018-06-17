@@ -2,9 +2,9 @@
 
 namespace app\models;
 
-use Illuminate\Database\Eloquent\Model as EloquentModel;
+use core\lib\Model;
 
-class TestModel extends EloquentModel
+class TestModel extends Model
 {
     /**
      * 与模型关联的数据表

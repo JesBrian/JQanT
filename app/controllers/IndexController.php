@@ -2,7 +2,7 @@
 
 namespace app\controllers;
 
-use app\models\TestModel;
+use app\logics\IndexLogics;
 use core\lib\Controller;
 
 class IndexController extends Controller
@@ -21,10 +21,7 @@ class IndexController extends Controller
 
         dump(get());
 
-        $model = new TestModel();
-        $model->index();
-        TestModel::test();
-
-        dump(TestModel::all());
+        $indexLogic = new IndexLogics();
+        $indexLogic->testLogics();
     }
 }

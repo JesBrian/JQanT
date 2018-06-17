@@ -3,6 +3,7 @@
 namespace core;
 
 use core\lib\Config;
+use core\lib\Helper;
 use core\lib\Model;
 use core\lib\Router;
 
@@ -13,19 +14,16 @@ class Index
      */
     public static function bootstrap()
     {
-        /**
-         * 配置框架
-         */
+        // 全局函数
+        Helper::globalFunction();
+
+        // 配置框架
         Config::loadConfig();
 
-        /**
-         * 连接数据库
-         */
+        // 连接数据库
         Model::connectDataBase();
 
-        /**
-         * 加载路由
-         */
+        // 加载路由
         Router::loadRoutes();
     }
 
