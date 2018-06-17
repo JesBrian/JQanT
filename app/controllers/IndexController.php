@@ -24,5 +24,7 @@ class IndexController extends Controller
         $model = new TestModel();
         $model->index();
         TestModel::test();
+
+        dump(TestModel::all());
     }
 }

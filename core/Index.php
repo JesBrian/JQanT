@@ -19,14 +19,14 @@ class Index
         Config::loadConfig();
 
         /**
-         * 加载路由
-         */
-        Router::loadRoutes();
-
-        /**
          * 连接数据库
          */
         Model::connectDataBase();
+
+        /**
+         * 加载路由
+         */
+        Router::loadRoutes();
     }
 
     /**
@@ -40,8 +40,6 @@ class Index
 
         if (file_exists($classPath)) {
             require ($classPath);
-        } else {
-            throw new \Exception('PHP 文件不存在');
         }
     }
 }
