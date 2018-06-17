@@ -2,16 +2,17 @@
 
 namespace core\lib;
 
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 class Model
 {
-    public function index()
+    /**
+     * Notes: 配置 Eloquent PHP ORM 操作数据库
+     */
+    public static function connectDataBase()
     {
-        echo 'Model TestModel Function<br/>';
-        $arr = [
-            'php' => 'php',
-            'java' => 'java',
-            'c#' => 'c#'
-        ];
-        dump($arr);
+        $capsule = new Capsule;
+        $capsule->addConnection(config('db'));
+        $capsule->bootEloquent();
     }
 }

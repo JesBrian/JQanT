@@ -15,13 +15,14 @@ class IndexController extends Controller
         session('name', 'Jesbrian');
         echo session('name');
 
-        $model = new TestModel();
-        $model->index();
-
         dump(config('isDebug'));
         config('isDebug', false);
         dump(config('isDebug'));
 
         dump(get());
+
+        $model = new TestModel();
+        $model->index();
+        TestModel::test();
     }
 }

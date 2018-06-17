@@ -2,17 +2,31 @@
 
 namespace core;
 
+use core\lib\Config;
+use core\lib\Model;
 use core\lib\Router;
 
 class Index
 {
     /**
      * Notes: 框架初始执行函数
-     * @throws \Exception
      */
     public static function bootstrap()
     {
-        new Router();
+        /**
+         * 配置框架
+         */
+        Config::loadConfig();
+
+        /**
+         * 加载路由
+         */
+        Router::loadRoutes();
+
+        /**
+         * 连接数据库
+         */
+        Model::connectDataBase();
     }
 
     /**

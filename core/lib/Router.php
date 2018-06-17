@@ -4,7 +4,10 @@ namespace core\lib;
 
 class Router
 {
-    public function __construct()
+    /**
+     * Notes: 加载路由
+     */
+    public static function loadRoutes()
     {
         require JQANT . '/routes/routes.php';
     }

@@ -60,31 +60,12 @@ define('APP', JQANT . '/app');
 define('CONFIG', JQANT . '/config');
 
 
-
 $GLOBALS['config'] = require CONFIG . '/global.php';
-
 require './vendor/autoload.php';
 require JQANT_CORE . '/HelperFunction/index.php';
 require JQANT_CORE . '/Index.php';
 
 spl_autoload_register('\core\Index::autoloadClass');
-
-
-if (config('isDebug') === true) {
-    $whoops = new \Whoops\Run();
-    $errorTitle = '框架运行错误';
-    $option = new \Whoops\Handler\PrettyPageHandler();
-    $option->setPageTitle($errorTitle);
-    $whoops->pushHandler($option);
-    $whoops->register();
-
-    ini_set('display_errors', 'ON');
-} else {
-    ini_set('display_errors', 'OFF');
-}
-if ((config('sessionAutoStart') === true) && (PHP_SESSION_ACTIVE !== session_status())) {
-    session_start();
-}
 
 
 \core\Index::bootstrap();

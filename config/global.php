@@ -1,5 +1,7 @@
 <?php
 
+$db = require  CONFIG . '/database.php';
+
 return [
     'isDebug' => true,
 
@@ -7,4 +9,6 @@ return [
     'defaultAction' => 'index',
 
     'sessionAutoStart' => true,
+
+    'db' => $db,
 ];
