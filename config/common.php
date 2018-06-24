@@ -1,6 +1,6 @@
 <?php
 
-$db = require  CONFIG . '/database.php';
+$db = require CONFIG . '/database.php';
 
 return [
     'isDebug' => true,

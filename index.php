@@ -60,7 +60,7 @@ define('APP', JQANT . '/app');
 define('CONFIG', JQANT . '/config');
 
 
-$GLOBALS['config'] = require CONFIG . '/global.php';
+$GLOBALS['config'] = require CONFIG . '/common.php';
 require './vendor/autoload.php';
 require JQANT_CORE . '/Index.php';
 
