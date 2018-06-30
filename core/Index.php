@@ -24,7 +24,9 @@ class Index
         Model::connectDataBase();
 
         // 加载路由
-        Router::loadRoutes();
+        $controller = Router::loadRoutes();
+
+        $controller->index();
     }
 
     /**

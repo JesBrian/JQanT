@@ -10,10 +10,10 @@ class IndexLogics
     {
         echo 'Index - logics';
 
-        $model = new TestModel();
-        $model->index();
-        TestModel::test();
+//        $model = new TestModel();
+//        $model->index();
+//        TestModel::test();
 
-        dump(TestModel::all());
+//        dump(TestModel::all());
     }
 }

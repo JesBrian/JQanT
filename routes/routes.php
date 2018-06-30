@@ -1,17 +1,37 @@
 <?php
 
-use NoahBuscher\Macaw\Macaw;
+//use NoahBuscher\Macaw\Macaw;
+//
+//Macaw::get('', '\app\controllers\IndexController@index');
+//
+//Macaw::get('/index', '\app\controllers\IndexController@index');
+//
+//Macaw::get('/index/(:num)/(:any)', function ($id, $name) {
+//    dump($id, $name);
+//});
+//
+//Macaw::error(function () {
+//    throw new Exception('404 - Not Found !');
+//});
+//
+//Macaw::dispatch();
 
-Macaw::get('', '\app\controllers\IndexController@index');
+return $routerMapping = [
+    '' => [
+        'request' => 'GET',
+        'controller' => '\app\controllers\IndexController',
+        'method' => 'index'
+    ],
 
-Macaw::get('/index', '\app\controllers\IndexController@index');
+    'index' => [
+        'request' => 'GET',
+        'controller' => '\app\controllers\IndexController',
+        'method' => 'index'
+    ],
 
-Macaw::get('/index/(:num)/(:any)', function ($id, $name) {
-    dump($id, $name);
-});
-
-Macaw::error(function () {
-    throw new Exception('404 - Not Found !');
-});
-
-Macaw::dispatch();
+    'user' => [
+        'request' => 'POST',
+        'controller' => '\app\controllers\UserController',
+        'method' => 'index'
+    ]
+];

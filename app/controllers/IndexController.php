@@ -2,8 +2,8 @@
 
 namespace app\controllers;
 
-use app\logics\IndexLogics;
 use core\lib\Controller;
+use app\logics\IndexLogics;
 
 class IndexController extends Controller
 {
