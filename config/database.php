@@ -1,5 +1,6 @@
 <?php
 
+// 数据库相关配置
 return [
     'driver' => 'mysql',
     'host' => '127.0.0.1',

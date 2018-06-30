@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JesBrian
- * Date: 2018-06-30
- * Time: 21:39
- */
+
+// 路由相关配置
+return [
+    'request' => 'GET',
+    'controller' => '\app\controllers\IndexController',
+    'method' => 'index'
+];

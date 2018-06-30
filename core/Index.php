@@ -11,6 +11,7 @@ class Index
 {
     /**
      * Notes: 框架初始执行函数
+     * @throws \Exception
      */
     public static function bootstrap()
     {
@@ -24,9 +25,13 @@ class Index
         Model::connectDataBase();
 
         // 加载路由
-        $controller = Router::loadRoutes();
+        Router::loadRoutes();
 
-        $controller->index();
+        // 实例化控制器并调用路由映射方法
+        $controller = config('router')['controller'];
+        $method = config('router')['method'];
+        $controller = new $controller;
+        $controller->$method();
     }
 
     /**
